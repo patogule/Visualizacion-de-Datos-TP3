@@ -1,6 +1,6 @@
 
 const mapaFetch = d3.json('barrios-caba.geojson');
-const dataFetch = d3.dsv(';', '147_intoxicacion_alimento.csv', d3.autoType);
+const dataFetch = d3.dsv(';', '147_15-21_junio.csv', d3.autoType);
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   /* Agrupamos reclamos x barrio y categoria */
@@ -13,7 +13,8 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   );
   console.log(reclamosPorBarrioYCateg)
   /* Obtenemos las categorías únicas del conjunto de datos */
-  const categoriasUnicas = Array.from(new Set(data.map(d => d.categoria)));
+  categoriasUnicas = Array.from(new Set(data.map(d => d.categoria)));
+  categoriasUnicas = categoriasUnicas.filter(categoria => categoria !== "EDUCACION" && categoria !== "ALUMBRADO" && categoria !== "DESARROLLO URBANO" && categoria !== "FISCALIZACIÓN ACTIVIDADES COMERCIALES" && categoria !== "TERRENO BALDÍO" && categoria !== "PLUVIALES");
   console.log(categoriasUnicas)    
  
   /* Mapa Coroplético */
@@ -27,7 +28,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       // Cantidad de denuncias por categoria
       type: 'categorical',
       domain: categoriasUnicas,
-      scheme: 'dark2',
+      scheme: 'paired',
       label: 'Categoría con más denuncias',
       legend: true,
     },
