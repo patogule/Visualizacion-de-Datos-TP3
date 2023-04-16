@@ -1,7 +1,7 @@
 
 d3.dsv(';', '147_15-21_junio.csv', d3.autoType).then(data => {
   // Filtrar los datos para incluir solo las categorías "A" y "B"
-  const filteredData = data.filter(d => d.domicilio_barrio === "PALERMO");
+  const filteredData = data.filter(d => d.domicilio_barrio === "PALERMO" && d.categoria === "TRÁNSITO");
 
   ///// 89% resueltos
 

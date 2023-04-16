@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="estilo.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mapa de ratas en CABA</title>
+    <title>Ciudad de Buenos Aires - Denuncias</title>
   </head>
   <body>
+
+    <app-header _ngcontent-qgt-c37_nghost-qgt-c34>
+      <header _ngcontent-qgt-c34 class="navbar navbar-light navbar-expand-lg">
+        <div _ngcontent-qgt-c34 class="container-md">
+          <button _ngcontent-qgt-c34 type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed">
+            <span _ngcontent-qgt-c34 class="navbar-toggler-icon">
+
+            </span>
+          </button>
+          <img _ngcontent-qgt-c34="" src="logo.png" alt="Ciudad de Buenos Aires" class="header-logo">
+          <div _ngcontent-qgt-c34="" id="navbarNav" class="navbar-collapse justify-content-end order-5 order-lg-2 collapse" style>
+            <ul _ngcontent-qgt-c34="" class="navbar-nav">
+              <li _ngcontent-qgt-c34="" class="nav-item mr-2 active">
+                <a _ngcontent-qgt-c34="" routerlink="/" class="nav-link" href="">Integrantes</a>
+                <ul>
+                  <div id="integ">
+                  <li>Valentina Pancaldi</li>
+                  <li>Patricion Guledgian</li>
+                  </div>
+                </ul>
+              </li>
+              <!---->
+              <li _ngcontent-qgt-c34="" class="nav-item">
+                <a _ngcontent-qgt-c34="" class="nav-link" href="https://github.com/patogule/Visualizacion-de-Datos-TP3/blob/main/mapa/147_15-21_junio.csv">Fuente</a>
+              </li>
+              <!---->
+              <!---->
+            </ul>
+          </div>
+          <!---->
+        </div>
+      </header>
+    </app-header>
+    <div _ngcontent-aip-c37 class="content">
+      <router-outlet _ngcontent-aip-c37></router-outlet>
+      <app-grupo _nghost-aip-c22>
+        <section _ngcontent-aip-c22 id="subcategorias-y-grupos">
+          <div _ngcontent-aip-c22 class="container py-5">
+            <app-breadcrumb _ngcontent-aip-c22 _nghost-aip-c18>
+              <nav _ngcontent-aip-c18 aria-label="breadcrumb">
+                <ol _ngcontent-aip-c18 class="breadcrumb">
+                  <li _ngcontent-aip-c18 class="breadcrumb-item">
+                    <a _ngcontent-aip-c18 routerlink="/" href="/inicio/">Inicio</a>
+                  </li>
+                  <li _ngcontent-aip-c18 class="breadcrumb-item">
+                    :: before
+                    "Tránsito y movilidad"
+                    <!---->
+                    <!---->
+                  </li>
+                  <!---->
+                </ol>
+              </nav>
+            </app-breadcrumb>
+            <!---->
+            <h1 _ngcontent-aip-c22>Tránsito y movilidad</h1>
+            <div _ngcontent-aip-c22 class="row">
+              <div _ngcontent-aip-c22 class="col-md-8">
+                <p _ngcontent-aip-c22 class="subtitle m-0">Servicios de transporte público, información para circular en vía pública, trámites de movilidad y seguridad vial.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </app-grupo>
+        <!---->
+      </div>
     <div id="chart"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
