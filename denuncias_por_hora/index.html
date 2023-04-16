@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palermo</title>
+    <style>
+      #chart {
+        overflow-y: auto;
+      }
+      #chart svg {
+        max-width: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Palermo</h1>
+    <h4>Resolucion de denuncias en el barrio de Palermo</h4>
+
+    <h2>Denuncias de transito por hora</h2>
+    <div id="chart"></div>
+    <h3> Nos ocupamos de vos! Un 95% de las denuncias atendidas y resueltas.<h3>
+
+    </h3> La ciudad priorizo atender y resolver las denuncias relacionadas con el transito en el barrio de Palermo ya que esta es la categoria que mas inconvenientes causa en este barrio. <h3>
+
+    </h3>En este grafico se puede observar la cantidad de denuncias sobre transito que se generan en promedio en el barrio de Palermo a lo largo de las horas del dia y que tantas de esas denuncias fueron atendidas y resueltas. </h3>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
