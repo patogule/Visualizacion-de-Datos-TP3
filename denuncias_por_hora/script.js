@@ -1,7 +1,9 @@
 
 d3.dsv(';', '147_15-21_junio.csv', d3.autoType).then(data => {
   // Filtrar los datos para incluir solo las categorías "A" y "B"
-  const filteredData = data.filter(d => d.categoria === "TRÁNSITO" || d.categoria === "LIMPIEZA Y RECOLECCIÓN" || d.categoria === "ARBOLADO Y ESPACIOS VERDES" || d.categoria === "BARRIOS EMERGENTES" || d.categoria === "CALLES Y VEREDAS" );
+  const filteredData = data.filter(d => d.domicilio_barrio === "PALERMO");
+
+  ///// 89% resueltos
 
   // Contar las denuncias por hora
   const counts = Array.from({length: 24}, () => 0);
