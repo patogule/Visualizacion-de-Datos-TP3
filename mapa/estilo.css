@@ -406,6 +406,7 @@ body section{animation:fadeInAnimation ease .6s;animation-iteration-count:1;}
 @font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');unicode-range:U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
 @font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/nunito/v25/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 
+
 li ul{
     display: none; 
 
@@ -416,4 +417,15 @@ li:hover > ul{
     background-color: rgb(241, 241, 241);
     border-radius: 8px;
     text-align: center;
+}
+
+.col-lg-8{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top:3rem!important;
+    padding-bottom:3rem!important;
+    max-width: 720px;
 }
