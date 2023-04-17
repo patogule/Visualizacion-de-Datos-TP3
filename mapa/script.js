@@ -14,7 +14,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   console.log(reclamosPorBarrioYCateg)
   /* Obtenemos las categorías únicas del conjunto de datos */
   categoriasUnicas = Array.from(new Set(data.map(d => d.categoria)));
-  categoriasUnicas = categoriasUnicas.filter(categoria => categoria !== "EDUCACION" && categoria !== "ALUMBRADO" && categoria !== "DESARROLLO URBANO" && categoria !== "FISCALIZACIÓN ACTIVIDADES COMERCIALES" && categoria !== "TERRENO BALDÍO" && categoria !== "PLUVIALES");
+  categoriasUnicas = categoriasUnicas.filter(categoria => categoria === 'LIMPIEZA Y RECOLECCIÓN' || categoria === 'TRÁNSITO' || categoria === 'CALLES Y VEREDAS' || categoria === 'BARRIOS EMERGENTES');
   console.log(categoriasUnicas)    
  
   /* Mapa Coroplético */
