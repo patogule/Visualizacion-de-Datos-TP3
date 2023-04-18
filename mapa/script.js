@@ -47,7 +47,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
         title: (d) => `${d.properties.BARRIO}`,
       }),
       Plot.geo(barrios, {
-        href: () => 'https://es.wikipedia.org/wiki/Palermo_(Buenos_Aires)',
+        href: () => '#opening',
         stroke: 'black',
         strokeWidth: 2,
         fill: 'transparent',
