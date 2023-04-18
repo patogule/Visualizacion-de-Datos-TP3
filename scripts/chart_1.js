@@ -1,6 +1,6 @@
 
-const mapaFetch = d3.json('barrios-caba.geojson');
-const dataFetch = d3.dsv(';', '147_15-21_junio.csv', d3.autoType);
+const mapaFetch = d3.json('../data/barrios-caba.geojson');
+const dataFetch = d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType);
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   /* Agrupamos reclamos x barrio y categoria */
@@ -59,5 +59,5 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   /* Agregamos al DOM la visualización chartMap */
   console.log('chartMap', chartMap);
 
-  d3.select('#chart').append(() => chartMap);
+  d3.select('#chartmapa').append(() => chartMap);
 });
