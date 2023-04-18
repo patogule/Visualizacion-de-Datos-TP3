@@ -19,16 +19,6 @@ li:hover > ul{
     border-radius: 8px;
     text-align: center;
 }
-.col-lg-8{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top:3rem!important;
-    padding-bottom:3rem!important;
-    max-width: 720px;
-}
 .nav-link:hover{
     box-shadow:0 0 0 .125rem #007bc7;
 }
@@ -53,6 +43,16 @@ body{background-color:#e6ebf0;}
 .col-xl-8,.col-xl-4,.col-lg-4,.alinear,.col-md-7,.col-md-6,.col-md-5{
     padding-right:15px;
     padding-left:15px;
+}
+.col-lg-8{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top:3rem!important;
+    padding-bottom:3rem!important;
+    max-width: 720px;
 }
 
 /* Footer */
