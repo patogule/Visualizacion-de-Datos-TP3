@@ -26,20 +26,19 @@ d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
     // Graficar los datos
     let chart = Plot.plot({
       width:700,
+      color: {
+        domain: ["Cerrada"],
+        range: ["#236EC8"],
+        legend: true
+      },
       marks: [
         Plot.line(counts.map((count, hour) => ({x: hour, y: count})), {
           x: d => d.x,
           y: d => d.y,
-          stroke: 'green',
+          stroke: 'grey',
         }),
-        Plot.areaY(counts.map((count, hour) => ({x: hour, y: count})), {
-          x: d => d.x,
-          y2: d => d.y,
-          color:{
-            legend:true
-          },
-          fillOpacity: 0.2
-        }),
+       
+    
         Plot.line(countsCerrado.map((count, hour) => ({x: hour, y: count})), {
           x: d => d.x,
           y: d => d.y,
@@ -51,8 +50,8 @@ d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
           color:{
             legend:true,
           },
-          fill: '', 
-          fillOpacity: 0.2
+          fill: '#236EC8', 
+          fillOpacity: 0.5
         }),
       ],
       

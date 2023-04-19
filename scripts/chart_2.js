@@ -45,9 +45,12 @@ const locale = {
   
     // Guardamos el svg generado en la variable chart
     let chart = Plot.plot({
+      height: 300,
+      width: 700,
+      
       x: {
         tickFormat: d3.format(',.0f'),
-        label: 'cantidad de denuncias'
+        label: 'Cantidad de denuncias'
       },
       y: {
         label: '',
@@ -59,11 +62,12 @@ const locale = {
           Plot.groupY(
             { x: 'count' },
             {
-              y: 'categoria',
+              y: 'categoria', fill: d => d.categoria === 'TRÁNSITO' ? "#4CBF2E" : "black",
             },
           ),
-  
+              
         ),
+   
         Plot.text(
           data_palermo_final,
           Plot.groupY(
