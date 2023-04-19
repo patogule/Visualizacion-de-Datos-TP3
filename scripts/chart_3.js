@@ -1,7 +1,8 @@
 
 d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
     // Filtrar los datos para incluir solo las categorías "A" y "B"
-    const filteredData = data.filter(d => d.domicilio_barrio === "PALERMO" && d.categoria === "TRÁNSITO");
+    const filteredPalermo = data.filter (d => d.domicilio_barrio === "PALERMO")
+    const filteredData = filteredPalermo.filter(d => d.categoria === "TRÁNSITO" || d.categoria === "LIMPIEZA Y RECOLECCIÓN");
   
     ///// 89% resueltos
   
@@ -31,6 +32,14 @@ d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
           y: d => d.y,
           stroke: 'green',
         }),
+        Plot.areaY(counts.map((count, hour) => ({x: hour, y: count})), {
+          x: d => d.x,
+          y2: d => d.y,
+          color:{
+            legend:true
+          },
+          fillOpacity: 0.2
+        }),
         Plot.line(countsCerrado.map((count, hour) => ({x: hour, y: count})), {
           x: d => d.x,
           y: d => d.y,
@@ -40,8 +49,9 @@ d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
           x: d => d.x,
           y2: d => d.y,
           color:{
-            legend:true
+            legend:true,
           },
+          fill: '', 
           fillOpacity: 0.2
         }),
       ],
