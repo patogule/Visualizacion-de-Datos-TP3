@@ -27,10 +27,10 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     color: {
       // Cantidad de denuncias por categoria
       type: 'categorical',
-      domain: categoriasUnicas,
-      scheme: 'paired',
+      domain: ['TRÁNSITO', 'LIMPIEZA Y RECOLECCIÓN', 'BARRIOS EMERGENTES', 'CALLES Y VEREDAS'],
+      range: [ '#4CBF2E','#236EC8','#C4DEB4','#AECDE1'] ,
       label: 'Categoría con más denuncias',
-      legend: true,
+      legend: true, 
     },
     marks: [
       Plot.geo(barrios, {
