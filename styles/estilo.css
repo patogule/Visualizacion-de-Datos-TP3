@@ -217,10 +217,11 @@ h2{
 }
 h4{font-size:1.1875rem;}
 
+
 p,h3{orphans:3;widows:3;}
 p{margin-top:0;margin-bottom:1rem;}
 ol,ul{margin-top:0;margin-bottom:1rem;}
-p,li{line-height:1.8;}
+p,li{line-height:1.5;}
 }
 
 .chartlinea{
