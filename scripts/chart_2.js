@@ -70,7 +70,7 @@ const locale = {
             { x: 'count', text: 'count' },
             {
               y: 'categoria',
-              // sort: { y: 'x', reverse: true },
+              sort: { y: 'x', reverse: true },
               textAnchor: 'start',
               dx: 5,
             },
