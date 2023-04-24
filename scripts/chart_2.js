@@ -17,32 +17,6 @@ const locale = {
     data_palermo_filtrado = data_palermo_total.filter(d => categorias.includes(d.categoria));
     console.log(data_palermo_filtrado);
   
-    // Definir una lista con las categorías que no se quieren sumar
-    const categoriasExcluidas = ['TRÁNSITO', 'LIMPIEZA Y RECOLECCIÓN', 'CALLES Y VEREDAS', 'ARBOLADO Y ESPACIOS VERDES'];
-  
-    // Filtrar los datos para excluir las categorías definidas en categoriasExcluidas
-    const data_palermo_suma = data_palermo_total.filter(d => !categoriasExcluidas.includes(d.categoria));
-    console.log(data_palermo_suma)
-  
-    //sumar la cantidad de filas del dataset filtrado con otras
-    contador = 0;
-    for (fila in data_palermo_suma){
-          contador += 1
-    }
-    console.log(contador)
-  
-    // Crear un nuevo objeto con la categoría 'OTRAS' y la cantidad de denuncias sumadas
-    const otrasCategorias = { categoria: 'OTRAS', count: contador };
-    console.log(otrasCategorias)
-  
-    // Agregar el objeto a la lista de categorías
-    categorias.push(otrasCategorias.categoria);
-    console.log(categorias)
-  
-    // Filtramos por las categorías que queremos mostrar
-    data_palermo_final = data_palermo_total.filter(d => categorias.includes(d.categoria));
-    console.log(data_palermo_final)
-  
     // Guardamos el svg generado en la variable chart
     let chart = Plot.plot({
       height: 250,
@@ -59,7 +33,7 @@ const locale = {
   
       marks: [
         Plot.barX(
-          data_palermo_final,
+          data_palermo_filtrado,
           Plot.groupY(
             { x: 
               'count', 
@@ -73,7 +47,7 @@ const locale = {
         ),
    
         Plot.text(
-          data_palermo_final,
+          data_palermo_filtrado,
           Plot.groupY(
             { x: 'count', text: 'count' },
             {
@@ -88,7 +62,8 @@ const locale = {
       ],
       marginLeft: 200,
       marginRight: 100,
-    })
+    });
+
     // Agregamos chart al div#chart de index.html
     d3.select('#chartbarra').append(() => chart)
   })  
