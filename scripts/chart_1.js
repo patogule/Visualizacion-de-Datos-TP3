@@ -48,7 +48,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       }),
       Plot.geo(barrios, {
         href: () => '#opening',
-        stroke: 'black',
+        stroke: '#38485c',
         strokeWidth: 2,
         fill: 'transparent',
         title: d => d.properties.BARRIO,

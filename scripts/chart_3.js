@@ -4,7 +4,7 @@ d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
     const filteredPalermo = data.filter (d => d.domicilio_barrio === "PALERMO")
     const filteredData = filteredPalermo.filter(d => d.categoria === "TRÁNSITO" || d.categoria === "LIMPIEZA Y RECOLECCIÓN");
   
-    ///// 89% resueltos
+  
   
     // Contar las denuncias por hora
     const counts = Array.from({length: 24}, () => 0);
@@ -27,7 +27,7 @@ d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
     let chart = Plot.plot({
       width:700,
       color: {
-        domain: ["Cerrada"],
+        domain: ["Casos cerrados"],
         range: ["#236EC8"],
         legend: true
       },
