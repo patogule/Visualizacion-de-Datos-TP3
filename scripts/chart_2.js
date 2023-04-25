@@ -49,12 +49,14 @@ const locale = {
         Plot.text(
           data_palermo_filtrado,
           Plot.groupY(
-            { x: 'count', text: 'count' },
+            { x: 'count', text: 'count'},
             {
               y: 'categoria',
               sort: { y: 'x', reverse: true },
               textAnchor: 'start',
               dx: 5,
+              fontSize: d => d.categoria === 'LIMPIEZA Y RECOLECCIÓN' ? "20px" : "10px",
+              fill: d => d.categoria === 'LIMPIEZA Y RECOLECCIÓN' ? "#236EC8" : "#38485c",
             },
           ),
         ),
