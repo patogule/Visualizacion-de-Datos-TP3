@@ -62,7 +62,7 @@ const locale = {
         ),
       
       ],
-      marginLeft: 200,
+      marginLeft: 165,
       marginRight: 100,
     });
 
