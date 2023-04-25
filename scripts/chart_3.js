@@ -72,5 +72,4 @@ d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType).then(data => {
     });
   
     d3.select('#chartlinea').append(() => chart);
-  });
-  
+  }); 
