@@ -55,14 +55,14 @@ const locale = {
               sort: { y: 'x', reverse: true },
               textAnchor: 'start',
               dx: 5,
-              fontSize: d => d.categoria === 'LIMPIEZA Y RECOLECCIÓN' ? "20px" : "10px",
               fill: d => d.categoria === 'LIMPIEZA Y RECOLECCIÓN' ? "#236EC8" : "#38485c",
+              fontSize: d => d.y === 'LIMPIEZA Y RECOLECCIÓN' ? "20px" : "14px",
             },
           ),
-        ),
+        )
       
       ],
-      marginLeft: 165,
+      marginLeft: 200,
       marginRight: 100,
     });
 
